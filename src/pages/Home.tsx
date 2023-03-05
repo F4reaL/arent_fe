@@ -1,13 +1,14 @@
 import React from "react";
 import { CircularProgressbarWithChildren , buildStyles } from "react-circular-progressbar";
 import BGIMG from "../assets/img/d01.jpg";
+import ChartComponent from "../components/ChartComponent";
 
 const Home = () => {
   const percentage: number = 75;
   return (
     <>
       <div className="flex ">
-        <div className="relative max-h-[312px] overflow-hidden ">
+        <div className="relative max-h-[312px] overflow-hidden shrink-0">
           <img
             src={BGIMG}
             alt=""
@@ -32,7 +33,9 @@ const Home = () => {
             </CircularProgressbarWithChildren>
           </div>
         </div>
-        <div className="w-full bg-red-700"></div>
+        <div className="w-full max-h-[312px] bg-dark600">
+          <ChartComponent />
+        </div>
       </div>
     </>
   );
