@@ -26,12 +26,12 @@ const MenuList = () => {
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   return (
-    <div className="fixed top-0 w-full bg-[#414141] px-10 sm:px-[80px] xl:px-[160px] flex justify-between items-center h-16 text-base text-light font-Hiragino">
+    <div className="fixed z-50 top-0 w-full bg-[#414141] px-10 sm:px-[80px] xl:px-[160px] flex justify-between items-center h-16 text-base text-light font-Hiragino">
       <Link to={'/'} className="w-[120px] sm:w-[144px]">
         <img src={logo} alt="" className="w-full object-contain" />
       </Link>
       <div className="navbar flex gap-6">
-        <Link to={'/list'} className="flex items-center gap-2">
+        <Link to={'/personal-schedule'} className="flex items-center gap-2">
           <img src={IconList} alt="" />
           <span>自分の記録</span>
         </Link>
