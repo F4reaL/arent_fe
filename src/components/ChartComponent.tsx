@@ -81,6 +81,14 @@ const data = [
     
   },
 ];
+// const DOTUV = ()=>{
+//   return <div className="w-2 h-2 rounded-full bg-secondary300"></div>
+// }
+// const DOTPV = (props: any)=>{
+//   const { cx, cy } = props;
+//   console.log("ccx)
+//   return <div className="w-2 h-2 rounded-full bg-primary300"></div>
+// }
 const ChartComponent = () => {
   return (
     <ResponsiveContainer width="100%" height="100%">
