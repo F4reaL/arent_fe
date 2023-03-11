@@ -89,13 +89,18 @@ const data = [
 //   console.log("ccx)
 //   return <div className="w-2 h-2 rounded-full bg-primary300"></div>
 // }
-const ChartComponent = () => {
+interface IProps{
+  width: number
+  height: number
+  className?: string
+}
+const ChartComponent = ({width, height, className}: IProps) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
         <LineChart
           layout="horizontal"
-          width={572}
-          height={312}
+          width={width}
+          height={height}
           data={data}
           margin={{
             top: 12,
@@ -109,7 +114,7 @@ const ChartComponent = () => {
           <YAxis  type="number" />
           <Tooltip />
           {/* <Legend /> */}
-          <Line dataKey="pv" stroke="#FFCC21" />
+          <Line dataKey="pv" stroke="#FFCC21"  />
           <Line dataKey="uv" stroke="#8FE9D0" />
         </LineChart>
       </ResponsiveContainer>

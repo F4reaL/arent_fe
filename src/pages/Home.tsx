@@ -52,7 +52,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full max-h-[312px] bg-dark600">
-          <ChartComponent />
+          <ChartComponent width={10000} height={312}/>
         </div>
       </div>
       <div className="px-[160px]">
