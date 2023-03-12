@@ -12,6 +12,7 @@ module.exports = {
         'primary400':'#FF963C',
         'primary500':'#EA6C00',
         'secondary300':'#8FE9D0',
+        'diary-boder':'#707070'
       },
       fontFamily:{
         'Hiragino':['Hiragino','sans-serif'],
@@ -19,5 +20,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

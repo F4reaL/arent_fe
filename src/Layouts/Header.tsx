@@ -17,7 +17,9 @@ const MenuList = () => {
         <li className="py-[22px] px-8 min-w-[280px] hover:bg-slate-400 cursor-pointer ">体重グラフ</li>
         <li className="py-[22px] px-8 min-w-[280px] hover:bg-slate-400 cursor-pointer ">目標</li>
         <li className="py-[22px] px-8 min-w-[280px] hover:bg-slate-400 cursor-pointer ">選択中のコース</li>
-        <li className="py-[22px] px-8 min-w-[280px] hover:bg-slate-400 cursor-pointer ">コラム一覧</li>
+        <Link to="/col-list">
+          <li className="py-[22px] px-8 min-w-[280px] hover:bg-slate-400 cursor-pointer ">コラム一覧</li>
+        </Link>
         <li className="py-[22px] px-8 min-w-[280px] hover:bg-slate-400 cursor-pointer ">設定</li>
       </ul>
     </div>
@@ -31,7 +33,7 @@ const Header = () => {
         <img src={logo} alt="" className="w-full object-contain" />
       </Link>
       <div className="navbar flex gap-6">
-        <Link to={'/personal-schedule'} className="flex items-center gap-2">
+        <Link to={'/records'} className="flex items-center gap-2">
           <img src={IconList} alt="" />
           <span>自分の記録</span>
         </Link>

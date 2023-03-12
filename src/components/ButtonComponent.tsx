@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
 
-interface IProps{
-    children: HTMLElement | string
+interface IProps {
+  children: HTMLElement | string;
+  className?: string;
 }
-const ButtonComponent = ({children}:IProps) => {
+const ButtonComponent = ({ children, className }: IProps) => {
   return (
-    <button className='btn-linear font-Hiragino text-[18px]'>{children as String}</button>
-  )
-}
+    <div className={`${className}`}>
+      <button className={`btn-linear font-Hiragino text-[18px] `}>
+        {children as String}
+      </button>
+    </div>
+  );
+};
 
-export default ButtonComponent
+export default ButtonComponent;

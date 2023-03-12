@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MealItem from "./MealItem";
+import ButtonComponent from "../../components/ButtonComponent";
 
 interface IProps{
   typeMeal: string
@@ -22,6 +23,8 @@ console.log(typeMeal)
         {Array(8).fill("item").map((item, index)=>
         <MealItem key={index}/>)}
       </div>
+      <ButtonComponent className="mt-[28px]">記録をもっと見る</ButtonComponent>
+
     </div>
   );
 };

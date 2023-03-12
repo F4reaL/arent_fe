@@ -7,7 +7,6 @@ import BGIMG from "../assets/img/d01.jpg";
 import ChartComponent from "../components/ChartComponent";
 import MenuBar from "../components/MenuBar";
 import MealList from "../components/MealList";
-import ButtonComponent from "../components/ButtonComponent";
 
 const Home = () => {
   const percentage: number = 75;
@@ -58,9 +57,6 @@ const Home = () => {
       <div className="px-[160px]">
         <MenuBar setTypeMeal={setTypeMeal} curType={typeMeal}/>
         <MealList typeMeal={typeMeal}/>
-        <div className="mt-[28px]">
-          <ButtonComponent>記録をもっと見る</ButtonComponent>
-        </div>
       </div>
     </>
   );

@@ -4,7 +4,8 @@ import ImgExercise from "../assets/img/MyRecommend-2.jpg";
 import ImgDiary from "../assets/img/MyRecommend-3.jpg";
 import ChartComponent from "../components/ChartComponent";
 import Exercises from "../components/Exercises"
-const PersonalSchedule = () => {
+import DiaryList from "../components/DiaryList"
+const MyRecords = () => {
   const [sortIndex, setSortIndex] = useState<number>(1)
   const TEXT = ({ children }: any) => {
     return <div className="font-Hiragino font-[300] text-white text-[14px] w-[160px] text-center bg-primary400 py-[1.5px]">{children}</div>
@@ -47,15 +48,16 @@ const PersonalSchedule = () => {
           <ChartComponent width={10000} height={10000} />
         </div>
         <div className="sort-tabs px-8 flex gap-4 font-Hiragino font-[300] ">
-          <div className={`tabs-index px-5  rounded-[11px]  ${sortIndex === 1 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(1)}>日</div>
-          <div className={`tabs-index px-5  rounded-[11px]  ${sortIndex === 2 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(2)}>週</div>
-          <div className={`tabs-index px-5  rounded-[11px]  ${sortIndex === 3 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(3)}>月</div>
-          <div className={`tabs-index px-5  rounded-[11px]  ${sortIndex === 4 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(4)}>年</div>
+          <div className={`tabs-index px-5 cursor-pointer rounded-[11px]  ${sortIndex === 1 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(1)}>日</div>
+          <div className={`tabs-index px-5 cursor-pointer rounded-[11px]  ${sortIndex === 2 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(2)}>週</div>
+          <div className={`tabs-index px-5 cursor-pointer rounded-[11px]  ${sortIndex === 3 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(3)}>月</div>
+          <div className={`tabs-index px-5 cursor-pointer rounded-[11px]  ${sortIndex === 4 ? "bg-primary300 text-white" : "bg-white text-primary300"}`} onClick={()=> setSortIndex(4)}>年</div>
         </div>
       </div>
-      <Exercises className="mt-[56px]" />
+      <Exercises className="mt-[56px] px-6 py-4" />
+      <DiaryList className="mt-[56px]"/>
     </div>
   );
 };
 
-export default PersonalSchedule;
+export default MyRecords;
